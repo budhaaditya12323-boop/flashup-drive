@@ -1,0 +1,10 @@
+*.key
+*.pem
+.env
+secrets/
+*.secret
+filebrowser/db/*
+!filebrowser/db/.gitkeep
+filebrowser/data/*
+!filebrowser/data/.gitkeep
+filebrowser/config/config.yaml

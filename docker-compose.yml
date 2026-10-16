@@ -1,0 +1,24 @@
+services:
+  filebrowser:
+    image: gtstef/filebrowser:stable
+    container_name: filebrowser
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - /mnt/data/homelab/filebrowser/data:/srv
+      - /mnt/data/homelab/filebrowser/config:/config
+      - /mnt/data/homelab/filebrowser/db:/home/filebrowser/data
+      - /mnt/data/homelab/filebrowser/cache:/tmp/filebrowser
+    environment:
+      - FILEBROWSER_CONFIG=/config/config.yaml
+      - FILEBROWSER_DATABASE_PATH=/home/filebrowser/data/filebrowser.sqlite
+      - TZ=Asia/Jakarta
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${CF_TUNNEL_TOKEN}

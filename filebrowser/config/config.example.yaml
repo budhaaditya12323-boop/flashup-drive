@@ -1,0 +1,10 @@
+server:
+  cacheDir: "/tmp/filebrowser"
+  cacheDirCleanup: true
+  maxArchiveSize: 5
+  sources:
+    - path: "/srv"
+      name: "Files"
+auth:
+   adminUsername: admin
+   adminPassword: "admin123"
