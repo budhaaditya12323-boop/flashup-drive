@@ -6,10 +6,10 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - /mnt/data/homelab/filebrowser/data:/srv
-      - /mnt/data/homelab/filebrowser/config:/config
-      - /mnt/data/homelab/filebrowser/db:/home/filebrowser/data
-      - /mnt/data/homelab/filebrowser/cache:/tmp/filebrowser
+      - ./filebrowser/data:/srv
+      - ./filebrowser/config:/config
+      - ./filebrowser/db:/home/filebrowser/data
+      - ./filebrowser/cache:/tmp/filebrowser
     environment:
       - FILEBROWSER_CONFIG=/config/config.yaml
       - FILEBROWSER_DATABASE_PATH=/home/filebrowser/data/filebrowser.sqlite
