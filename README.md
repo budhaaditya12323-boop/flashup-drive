@@ -1,7 +1,6 @@
-
-
-
-# FileBrowser Quantum + Cloudflare Tunnel (Docker Compose)
+# FlashUp Drive
+## Set Up Server Lokal Mudah, Dengan FileBrowser Quantum + Docker Compose 
+---
 
 Deployment [FileBrowser Quantum](https://github.com/gtsteffaniak/filebrowser) menggunakan Docker Compose, dengan opsi akses dari internet lewat Cloudflare Tunnel. Cocok untuk homelab: clone, isi konfigurasi, jalankan.
 
@@ -71,8 +70,8 @@ Folder `data/`, `db/`, dan `cache/` disediakan lewat `.gitkeep` agar sudah ada s
 
 1. **Clone repo**
 ```bash
-   git clone https://github.com/budhaaditya12323-boop/personal-cloud-filebrowse
-   cd ./personal-cloud-filebrowse
+   git clone https://github.com/budhaaditya12323-boop/flashup-drive
+   cd ./flashup-drive
 ```
 
 2. **Siapkan file dan folder**
